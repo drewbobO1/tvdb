@@ -5,7 +5,7 @@ src
 │   │   └── tv-detail-form
 │   │       └── tv-detail-form.component.ts|.html
 │   ├── shared
-│   │   ├── tv-detail.service.tsT
+│   │   ├── tv-detail.service.ts
 │   │   └── tv-detail.model.ts
 │   └── app.module.ts
 ├── styles.css (global css rules)
