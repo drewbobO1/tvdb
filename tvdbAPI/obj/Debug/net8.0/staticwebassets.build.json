@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "f+IzT/NfSFaQUTNc2Jlas6Rjg9GHPEsrdGkpaK/u+do=",
+  "Source": "tvdbAPI",
+  "BasePath": "_content/tvdbAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

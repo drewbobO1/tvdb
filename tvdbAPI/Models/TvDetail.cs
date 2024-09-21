@@ -6,7 +6,7 @@ namespace tvdbAPI.Models;
 public class TvDetail
 {
     [Key] 
-    public int TvId { get; set; }
+    public int TvDetailId { get; set; }
 
     [Column(TypeName = "nvarchar(100)")]
     public string TvTitle { get; set; } = "";
@@ -15,14 +15,14 @@ public class TvDetail
     public string ArtLink { get; set; } = "";
 
     [Column(TypeName = "nvarchar(3)")]
-    public int EpisodeQty { get; set; }
+    public string EpisodeQty { get; set; } = "";
 
     [Column(TypeName = "nvarchar(10)")]
-    public int EpisodeRuntime { get; set; }
+    public string EpisodeRuntime { get; set; } = "";
 
     [Column(TypeName = "nvarchar(4)")]
-    public int StartYear { get; set; }
+    public string StartYear { get; set; } = "";
 
     [Column(TypeName = "nvarchar(4)")]
-    public int EndYear { get; set; }
+    public string EndYear { get; set; } = "";
 }
