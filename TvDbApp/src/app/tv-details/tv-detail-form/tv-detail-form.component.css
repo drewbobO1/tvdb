@@ -1,3 +1,7 @@
 .form-body {
     border: 5px solid red;
 }
+
+.single-field {
+    margin: 20px 0;
+}

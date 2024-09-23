@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+
+import { CardModule } from 'primeng/card';
+
 import { FloatLabelModule } from 'primeng/floatlabel';
 import { InputNumberModule } from 'primeng/inputnumber';
 
@@ -12,6 +15,7 @@ import { InputGroupAddonModule } from 'primeng/inputgroupaddon';
   standalone: true,
   imports: [
     FormsModule,
+    CardModule,
     FloatLabelModule,
     InputNumberModule,
     InputGroupModule,

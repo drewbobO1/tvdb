@@ -1,15 +1,20 @@
 <div class="form-body">
     <p>tv-detail-form works!</p>
-    <div class="single-field">
-        <p-floatLabel>
-            <input id="title" type="text" pInputText [(ngModel)]="title" />
-            <label for="title">Title</label>
-        </p-floatLabel>
-    </div>
-    <div class="single-field">
-        <p-inputGroup>
-            <p-inputNumber inputId="integeronly" [(ngModel)]="episodeQty" /> 
-            <p-inputGroupAddon>mins</p-inputGroupAddon>
-        </p-inputGroup>
-    </div>
+    <p-card header="Show Details">
+        <!-- <p class="m-0">
+            
+        </p> -->
+        <div class="single-field">
+            <p-floatLabel>
+                <input id="title" type="text" pInputText [(ngModel)]="title" />
+                <label for="title">Title</label>
+            </p-floatLabel>
+        </div>
+        <div class="single-field">
+            <p-inputGroup>
+                <p-inputNumber inputId="integeronly" [(ngModel)]="episodeQty" /> 
+                <p-inputGroupAddon>mins</p-inputGroupAddon>
+            </p-inputGroup>
+        </div>
+    </p-card>
 </div>
