@@ -9,6 +9,8 @@ import { InputNumberModule } from 'primeng/inputnumber';
 import { InputGroupModule } from 'primeng/inputgroup';
 import { InputGroupAddonModule } from 'primeng/inputgroupaddon';
 
+import { CalendarModule } from 'primeng/calendar';
+
 
 @Component({
   selector: 'app-tv-detail-form',
@@ -19,7 +21,8 @@ import { InputGroupAddonModule } from 'primeng/inputgroupaddon';
     FloatLabelModule,
     InputNumberModule,
     InputGroupModule,
-    InputGroupAddonModule
+    InputGroupAddonModule,
+    CalendarModule
   ],
   templateUrl: './tv-detail-form.component.html',
   styleUrls: [
@@ -29,4 +32,7 @@ import { InputGroupAddonModule } from 'primeng/inputgroupaddon';
 export class TvDetailFormComponent {
   title: string = "";
   episodeQty: number = 0;
+  episodeLength: number = 0;
+  startDate: string = "";
+  endDate: string = "";
 }
