@@ -1,0 +1,20 @@
+.testing {
+    color: hotpink;
+}
+
+.page {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+
+    justify-content: center;
+}
+
+.appContent {
+    display: flex;
+    width: 85vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
