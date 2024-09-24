@@ -10,6 +10,7 @@ import { InputGroupModule } from 'primeng/inputgroup';
 import { InputGroupAddonModule } from 'primeng/inputgroupaddon';
 
 import { CalendarModule } from 'primeng/calendar';
+import { InputTextModule } from 'primeng/inputtext';
 
 
 @Component({
@@ -22,7 +23,8 @@ import { CalendarModule } from 'primeng/calendar';
     InputNumberModule,
     InputGroupModule,
     InputGroupAddonModule,
-    CalendarModule
+    CalendarModule,
+    InputTextModule
   ],
   templateUrl: './tv-detail-form.component.html',
   styleUrls: [
