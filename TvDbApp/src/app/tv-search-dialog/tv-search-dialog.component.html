@@ -14,7 +14,7 @@
 <p-dataView #dv [value]="tvQueryList">
     <ng-template pTemplate="list" let-tvQueryList>
         <div *ngFor="let result of tvQueryList">
-            <p-card header={{result.title}}>
+            <p-card class="queryResultCard" header={{result.title}}>
                     <!-- <div>{{ result.title }}</div> -->
                     <div>{{ result.network }}</div>
                     <div>{{ result.summary }}</div>

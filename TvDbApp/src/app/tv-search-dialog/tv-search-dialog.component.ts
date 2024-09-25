@@ -24,7 +24,9 @@ import { CardModule } from 'primeng/card';
     CardModule
   ],
   templateUrl: './tv-search-dialog.component.html',
-  styles: ``
+  styleUrls: [
+    './tv-search-dialog.component.css'
+  ]
 })
 export class TvSearchDialogComponent {
   constructor(public service: TvDetailService, public tvDetail: TvDetail) {
