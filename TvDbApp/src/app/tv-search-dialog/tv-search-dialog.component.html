@@ -1,1 +1,12 @@
 <p>tv-search-dialog works!</p>
+<div class="single-field">
+    <p-inputGroup>
+        <input #tvTitleQuery type="text" pInputText placeholder="Keyword" />
+        <button type="button" 
+        pButton icon="pi pi-search" 
+        class="p-button-secondary"
+        (click)="onSearch(tvTitleQuery.value)"
+        >
+        </button>
+    </p-inputGroup>
+</div>

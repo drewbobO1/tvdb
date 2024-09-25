@@ -38,7 +38,7 @@ import { TvDetail } from '../../shared/tv-detail.model';
   ],
 })
 export class TvDetailFormComponent {
-  constructor (public service: TvDetailService, public tvDetail: TvDetailsComponent) {
+  constructor (public service: TvDetailService, public tvDetails: TvDetailsComponent) {
 
   }
 
@@ -63,7 +63,7 @@ export class TvDetailFormComponent {
           newEntry.firstDayAired = result.first_air_time;
           newEntry.artworkUrl = result.image_url;
           
-          this.tvDetail.tvQueryList.push(newEntry);
+          this.tvDetails.tvQueryList.push(newEntry);
         }
       },
       error: err => {

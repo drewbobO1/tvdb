@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TvDetailFormComponent } from './tv-detail-form/tv-detail-form.component';
+// import { TvDetailFormComponent } from './tv-detail-form/tv-detail-form.component';
 import { OrderListModule } from 'primeng/orderlist';
 import { DataViewModule } from 'primeng/dataview';
-import { TvDetail } from '../shared/tv-detail.model';
 
 import { DialogModule } from 'primeng/dialog';
 import { ButtonModule } from 'primeng/button';
@@ -17,7 +16,7 @@ import { TvSearchDialogComponent } from '../tv-search-dialog/tv-search-dialog.co
   selector: 'app-tv-details',
   standalone: true,
   imports: [
-    TvDetailFormComponent,
+    // TvDetailFormComponent,
     CommonModule,
     OrderListModule,
     DataViewModule,
