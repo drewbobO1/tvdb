@@ -18,5 +18,5 @@ import { OrderListModule } from 'primeng/orderlist';
 })
 export class TvDetailsComponent {
 
-  tvQueryList = {};
+  tvQueryList: string[] = ["testing"];
 }
