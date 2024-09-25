@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TvDetailFormComponent } from './tv-detail-form/tv-detail-form.component';
 import { OrderListModule } from 'primeng/orderlist';
+import { DataViewModule } from 'primeng/dataview';
 import { TvDetail } from '../shared/tv-detail.model';
 
 
@@ -10,7 +11,9 @@ import { TvDetail } from '../shared/tv-detail.model';
   standalone: true,
   imports: [
     TvDetailFormComponent,
-    CommonModule
+    CommonModule,
+    OrderListModule,
+    DataViewModule
   ],
   templateUrl: './tv-details.component.html',
   styleUrls: [
