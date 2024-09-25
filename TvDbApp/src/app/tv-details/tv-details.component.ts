@@ -11,8 +11,7 @@ import { ButtonModule } from 'primeng/button';
 import { InputGroupModule } from 'primeng/inputgroup';
 import { InputGroupAddonModule } from 'primeng/inputgroupaddon';
 
-import { TvSearchDialogComponent } from './tv-search-dialog/tv-search-dialog.component.html/tv-search-dialog.component';
-
+import { TvSearchDialogComponent } from '../tv-search-dialog/tv-search-dialog.component';
 
 @Component({
   selector: 'app-tv-details',

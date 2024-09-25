@@ -1,22 +1,18 @@
 import { Component } from '@angular/core';
 
-import { TvDetailService } from '../../../shared/tv-detail.service';
-import { TvDetail } from '../../../shared/tv-detail.model';
-import { TvDetailsComponent } from '../../tv-details.component';
-import { environment } from '../../../../environments/environment.development';
+import { TvDetailService } from '../shared/tv-detail.service';
+import { TvDetail } from '../shared/tv-detail.model';
+// import { TvDetailsComponent } from '../tv-details/tv-details.component';
+import { environment } from '../../environments/environment.development';
 
 import { CommonModule } from '@angular/common';
 import { DataViewModule } from 'primeng/dataview';
-
-
-
-
 
 @Component({
   selector: 'app-tv-search-dialog',
   standalone: true,
   imports: [
-    TvDetailsComponent,
+    // TvDetailsComponent,
     CommonModule,
     DataViewModule
   ],
