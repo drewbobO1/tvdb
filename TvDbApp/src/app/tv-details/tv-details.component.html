@@ -10,7 +10,7 @@
             {{showDetail.firstDayAired}}
         </li>
     </ul> -->
-    <p-dataView #dv [value]="tvQueryList">
+    <!-- <p-dataView #dv [value]="tvQueryList">
         <ng-template pTemplate="list" let-tvQueryList>
             <div *ngFor="let result of tvQueryList">
                 <div class="eachTvQueryResult">
@@ -21,11 +21,12 @@
                 </div>
             </div>
         </ng-template>
-    </p-dataView>
+    </p-dataView> -->
     <p-button (onClick)="showDialog()" label="Show" />
     <p-dialog header="Search shows" [modal]="true" [(visible)]="dialogVisible" [style]="{ width: '25rem' }">
-        <app-tv-detail-form />
+        <!-- <app-tv-search-dialog /> -->
     </p-dialog>
+    <app-tv-detail-form />
 
     <!-- <div class="card flex justify-content-center">
         <p-dialog header="Search shows" [modal]="true" [(visible)]="dialogVisible" [style]="{ width: '25rem' }">

@@ -65,7 +65,6 @@ export class TvDetailFormComponent {
           
           this.tvDetail.tvQueryList.push(newEntry);
         }
-        // this.tvDetail.tvQueryList = res.data;
       },
       error: err => {
         console.error("Show not found: ", err);

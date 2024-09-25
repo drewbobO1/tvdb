@@ -7,9 +7,11 @@ import { TvDetail } from '../shared/tv-detail.model';
 
 import { DialogModule } from 'primeng/dialog';
 import { ButtonModule } from 'primeng/button';
-import { InputTextModule } from 'primeng/inputtext';
+// import { InputTextModule } from 'primeng/inputtext';
 import { InputGroupModule } from 'primeng/inputgroup';
 import { InputGroupAddonModule } from 'primeng/inputgroupaddon';
+
+import { TvSearchDialogComponent } from './tv-search-dialog/tv-search-dialog.component.html/tv-search-dialog.component';
 
 
 @Component({
@@ -23,7 +25,8 @@ import { InputGroupAddonModule } from 'primeng/inputgroupaddon';
     DialogModule,
     InputGroupModule,
     InputGroupAddonModule,
-    ButtonModule
+    ButtonModule,
+    TvSearchDialogComponent
   ],
   templateUrl: './tv-details.component.html',
   styleUrls: [
