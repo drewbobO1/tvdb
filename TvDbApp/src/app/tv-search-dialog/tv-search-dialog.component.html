@@ -14,12 +14,12 @@
 <p-dataView #dv [value]="tvQueryList">
     <ng-template pTemplate="list" let-tvQueryList>
         <div *ngFor="let result of tvQueryList">
-            <div class="eachTvQueryResult">
-                <div>{{ result.title }}</div>
-                <div>{{ result.network }}</div>
-                <div>{{ result.summary }}</div>
-                <div>{{ result.firstDayAired }}</div>
-            </div>
+            <p-card header={{result.title}}>
+                    <!-- <div>{{ result.title }}</div> -->
+                    <div>{{ result.network }}</div>
+                    <div>{{ result.summary }}</div>
+                    <div>{{ result.firstDayAired }}</div>
+            </p-card>
         </div>
     </ng-template>
 </p-dataView>

@@ -10,6 +10,8 @@ import { DataViewModule } from 'primeng/dataview';
 import { InputGroupModule } from 'primeng/inputgroup';
 import { InputGroupAddonModule } from 'primeng/inputgroupaddon';
 
+import { CardModule } from 'primeng/card';
+
 @Component({
   selector: 'app-tv-search-dialog',
   standalone: true,
@@ -18,7 +20,8 @@ import { InputGroupAddonModule } from 'primeng/inputgroupaddon';
     CommonModule,
     DataViewModule,
     InputGroupModule,
-    InputGroupAddonModule
+    InputGroupAddonModule,
+    CardModule
   ],
   templateUrl: './tv-search-dialog.component.html',
   styles: ``
