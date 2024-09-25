@@ -30,8 +30,13 @@
         </div>
         <div class="single-field">
             <p-inputGroup>
-                <input type="text" pInputText placeholder="Keyword" />
-                <button type="button" pButton icon="pi pi-search" class="p-button-secondary"></button>
+                <input #tvTitleQuery type="text" pInputText placeholder="Keyword" />
+                <button type="button" 
+                pButton icon="pi pi-search" 
+                class="p-button-secondary"
+                (click)="onSearch(tvTitleQuery.value)"
+                >
+            </button>
             </p-inputGroup>
         </div>
     </p-card>
