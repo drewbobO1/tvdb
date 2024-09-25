@@ -55,7 +55,17 @@ export class TvDetailFormComponent {
     .subscribe({
       next: res => {
         console.log("Show found: ", res.data);
-        this.tvDetail.tvQueryList = res.data;
+        for (let result of res.data) {
+          let newEntry: TvDetail = new TvDetail();
+          newEntry.title = result.name;
+          newEntry.network = result.network;
+          newEntry.summary = result.overview;
+          newEntry.firstDayAired = result.first_air_time;
+          newEntry.artworkUrl = result.image_url;
+          
+          this.tvDetail.tvQueryList.push(newEntry);
+        }
+        // this.tvDetail.tvQueryList = res.data;
       },
       error: err => {
         console.error("Show not found: ", err);

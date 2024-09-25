@@ -4,7 +4,11 @@
         <li
         *ngFor="let showDetail of this.tvQueryList"
         >
-            {{showDetail.name}}
+        <!-- <img src="{{showDetail.artworkUrl}}" alt=""> -->
+            {{showDetail.title}}
+            {{showDetail.network}}
+            {{showDetail.summary}}
+            {{showDetail.firstDayAired}}
         </li>
     </ul>
     <app-tv-detail-form />
