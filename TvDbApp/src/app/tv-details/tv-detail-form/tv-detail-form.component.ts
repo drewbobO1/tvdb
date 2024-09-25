@@ -12,13 +12,6 @@ import { InputGroupAddonModule } from 'primeng/inputgroupaddon';
 import { CalendarModule } from 'primeng/calendar';
 import { InputTextModule } from 'primeng/inputtext';
 
-import { TvDetailService } from '../../shared/tv-detail.service';
-import { environment } from '../../../environments/environment.development';
-
-import { TvDetailsComponent } from '../tv-details.component';
-import { TvDetail } from '../../shared/tv-detail.model';
-
-
 @Component({
   selector: 'app-tv-detail-form',
   standalone: true,
@@ -38,7 +31,7 @@ import { TvDetail } from '../../shared/tv-detail.model';
   ],
 })
 export class TvDetailFormComponent {
-  constructor (public service: TvDetailService, public tvDetails: TvDetailsComponent) {
+  constructor () {
 
   }
 
@@ -47,28 +40,4 @@ export class TvDetailFormComponent {
   episodeLength: number = 0;
   startDate: string = "";
   endDate: string = "";
-
-  queryResultData: TvDetail = new TvDetail();
-
-  onSearch(showTitle: string) {
-    this.service.searchShowList(showTitle, environment.tvDbWebApiAuthKey)
-    .subscribe({
-      next: res => {
-        console.log("Show found: ", res.data);
-        for (let result of res.data) {
-          let newEntry: TvDetail = new TvDetail();
-          newEntry.title = result.name;
-          newEntry.network = result.network;
-          newEntry.summary = result.overview;
-          newEntry.firstDayAired = result.first_air_time;
-          newEntry.artworkUrl = result.image_url;
-          
-          this.tvDetails.tvQueryList.push(newEntry);
-        }
-      },
-      error: err => {
-        console.error("Show not found: ", err);
-      }
-    })
-  }
 }
