@@ -19,5 +19,5 @@ import { TvDetail } from '../shared/tv-detail.model';
 })
 export class TvDetailsComponent {
 
-  tvQueryList: TvDetail[] = [];
+  tvQueryList: any = [];
 }

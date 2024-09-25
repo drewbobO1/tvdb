@@ -16,6 +16,7 @@ import { TvDetailService } from '../../shared/tv-detail.service';
 import { environment } from '../../../environments/environment.development';
 
 import { TvDetailsComponent } from '../tv-details.component';
+import { TvDetail } from '../../shared/tv-detail.model';
 
 
 @Component({
@@ -47,11 +48,13 @@ export class TvDetailFormComponent {
   startDate: string = "";
   endDate: string = "";
 
+  queryResultData: TvDetail = new TvDetail();
+
   onSearch(showTitle: string) {
     this.service.searchShowList(showTitle, environment.tvDbWebApiAuthKey)
     .subscribe({
       next: res => {
-        // console.log("Show found: ", res.data);
+        console.log("Show found: ", res.data);
         this.tvDetail.tvQueryList = res.data;
       },
       error: err => {
