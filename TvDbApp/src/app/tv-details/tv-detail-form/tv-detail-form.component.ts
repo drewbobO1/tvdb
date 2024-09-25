@@ -15,6 +15,8 @@ import { InputTextModule } from 'primeng/inputtext';
 import { TvDetailService } from '../../shared/tv-detail.service';
 import { environment } from '../../../environments/environment.development';
 
+import { TvDetailsComponent } from '../tv-details.component';
+
 
 @Component({
   selector: 'app-tv-detail-form',
@@ -27,7 +29,7 @@ import { environment } from '../../../environments/environment.development';
     InputGroupModule,
     InputGroupAddonModule,
     CalendarModule,
-    InputTextModule
+    InputTextModule,
   ],
   templateUrl: './tv-detail-form.component.html',
   styleUrls: [
@@ -35,7 +37,7 @@ import { environment } from '../../../environments/environment.development';
   ],
 })
 export class TvDetailFormComponent {
-  constructor (public service: TvDetailService) {
+  constructor (public service: TvDetailService, public tvDetail: TvDetailsComponent) {
 
   }
 
@@ -50,6 +52,7 @@ export class TvDetailFormComponent {
     .subscribe({
       next: res => {
         console.log("Show found: ", res);
+        // this.tvDetail.tvQueryList = res;
       },
       error: err => {
         console.error("Show not found: ", err);

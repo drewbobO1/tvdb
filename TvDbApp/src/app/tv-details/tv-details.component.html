@@ -1,4 +1,11 @@
 <div class="body">
-    <p>tv-details works!</p>
+    This is supposed to be a list
+    <ul>
+        <li
+        *ngFor="let showDetail of this.tvQueryList"
+        >
+            {{showDetail}}
+        </li>
+    </ul>
     <app-tv-detail-form />
 </div>
