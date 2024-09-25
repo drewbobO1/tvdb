@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TvDetailFormComponent } from './tv-detail-form/tv-detail-form.component';
 import { OrderListModule } from 'primeng/orderlist';
+import { TvDetail } from '../shared/tv-detail.model';
 
 
 @Component({
@@ -18,5 +19,5 @@ import { OrderListModule } from 'primeng/orderlist';
 })
 export class TvDetailsComponent {
 
-  tvQueryList: string[] = ["testing"];
+  tvQueryList: TvDetail[] = [];
 }

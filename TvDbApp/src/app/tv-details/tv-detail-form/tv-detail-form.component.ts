@@ -51,8 +51,8 @@ export class TvDetailFormComponent {
     this.service.searchShowList(showTitle, environment.tvDbWebApiAuthKey)
     .subscribe({
       next: res => {
-        console.log("Show found: ", res);
-        // this.tvDetail.tvQueryList = res;
+        // console.log("Show found: ", res.data);
+        this.tvDetail.tvQueryList = res.data;
       },
       error: err => {
         console.error("Show not found: ", err);
