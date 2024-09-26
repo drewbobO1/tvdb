@@ -41,6 +41,7 @@ export class TvSearchDialogComponent {
     .subscribe({
       next: res => {
         console.log("Show found: ", res.data);
+        if (this.tvQueryList.length != 0) this.tvQueryList = [];
         for (let result of res.data) {
           let newEntry: TvDetail = new TvDetail();
           newEntry.title = result.name;
