@@ -10,6 +10,11 @@
     border: none;
 }
 
+.tv-image {
+    width: 10rem;
+    height: 15rem;
+}
+
 /* Wack float label malfunction half-solution */
 /* textarea:focus ~ label,
 textarea ~ label {
