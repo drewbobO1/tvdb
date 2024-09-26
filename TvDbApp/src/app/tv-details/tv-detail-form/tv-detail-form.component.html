@@ -2,6 +2,9 @@
     <p>tv-detail-form works!</p>
     <p-card header="Show Details">
         <div class="single-field">
+            <img src="{{artworkUrl}}" alt="">
+        </div>
+        <div class="single-field">
             <p-floatLabel>
                 <input id="title" type="text" pInputText [(ngModel)]="title" variant="filled"/>
                 <label for="title">Title</label>
@@ -34,6 +37,17 @@
                     >
                 </textarea>
                 <label for="summary">Summary</label>
+            </p-floatLabel>
+        </div>
+        <div class="single-field">
+            <p-floatLabel>
+                <p-calendar 
+                    [(ngModel)]="firstDayAired" 
+                    [iconDisplay]="'input'" 
+                    [showIcon]="true" 
+                    inputId="icondisplay" 
+                />
+                <label for="icondisplay">First day aired</label>
             </p-floatLabel>
         </div>
         

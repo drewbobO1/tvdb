@@ -16,6 +16,7 @@ import { DropdownModule } from 'primeng/dropdown';
 import { FieldsetModule } from 'primeng/fieldset';
 // import { InputTextModule } from 'primeng/inputtext';
 
+
 @Component({
   selector: 'app-tv-detail-form',
   standalone: true,
@@ -46,7 +47,7 @@ export class TvDetailFormComponent {
   status: string = "";
   summary: string = "";
   firstDayAired: string = "";
-  artworkUrl: string = "";
+  artworkUrl: string = "https://apps.uwm.edu/docs/wp-content/uploads/dafoe-USE-THIS-ONLY-NEW-AS-OF-APR-15-HEADSHOT-DAFOE_WILLEM2_OK-Narrative-041922-scaled.jpeg";
 
   statusOptions = [
     "Continuing",
