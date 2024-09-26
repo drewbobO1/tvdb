@@ -36,8 +36,9 @@ export class TvDetailFormComponent {
   }
 
   title: string = "";
-  episodeQty: number = 0;
-  episodeLength: number = 0;
-  startDate: string = "";
-  endDate: string = "";
+  network: string = "";
+  status: string = "";
+  summary: string = "";
+  firstDayAired: string = "";
+  artworkUrl: string = "";
 }
