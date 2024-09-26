@@ -8,8 +8,28 @@
             </p-floatLabel>
         </div>
         <div class="single-field">
-
+            <p-floatLabel>
+                <input id="network" type="text" pInputText [(ngModel)]="network" variant="filled"/>
+                <label for="network">Network</label>
+            </p-floatLabel>
         </div>
+        <div class="single-field">
+            <p-floatLabel>
+                <p-dropdown 
+                    [options]="statusOptions"
+                    [(ngModel)]="status"
+                    [showClear]="true" 
+                    variant="filled"
+                    inputId="float-label" />
+                <label for="float-label">Status</label>
+            </p-floatLabel>
+        </div>
+        <p-fieldset legend="Summary" [toggleable]="true">
+            <p>
+                `${summary}`
+            </p>
+        </p-fieldset>
+        
         <!-- <div class="single-field">
             Episode length
             <p-inputGroup>

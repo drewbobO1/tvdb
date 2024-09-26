@@ -12,6 +12,8 @@ import { InputGroupAddonModule } from 'primeng/inputgroupaddon';
 import { CalendarModule } from 'primeng/calendar';
 import { InputTextModule } from 'primeng/inputtext';
 
+import { DropdownModule } from 'primeng/dropdown';
+
 @Component({
   selector: 'app-tv-detail-form',
   standalone: true,
@@ -24,6 +26,7 @@ import { InputTextModule } from 'primeng/inputtext';
     InputGroupAddonModule,
     CalendarModule,
     InputTextModule,
+    DropdownModule
   ],
   templateUrl: './tv-detail-form.component.html',
   styleUrls: [
@@ -41,4 +44,11 @@ export class TvDetailFormComponent {
   summary: string = "";
   firstDayAired: string = "";
   artworkUrl: string = "";
+
+  statusOptions = [
+    "Continuing",
+    "Ended",
+    "Released",
+    "Announced"
+  ]
 }
