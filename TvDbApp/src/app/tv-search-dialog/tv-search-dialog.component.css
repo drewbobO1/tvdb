@@ -1,5 +1,5 @@
 :host ::ng-deep .p-card-body {
-    color: aqua;
-    background-color: hotpink;
+    color: rgb(157, 157, 161);
+    background-color: rgb(69, 65, 67);
     /* border-radius: 10%; */
 }

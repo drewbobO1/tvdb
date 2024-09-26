@@ -16,6 +16,7 @@
         <div *ngFor="let result of tvQueryList">
             <p-card class="queryResultCard" header={{result.title}} (click)="handleResultClick(result)">
                 <div>{{ result.network }}</div>
+                <div>{{ result.status }}</div>
                 <div>{{ result.summary }}</div>
                 <div>{{ result.firstDayAired }}</div>
             </p-card>

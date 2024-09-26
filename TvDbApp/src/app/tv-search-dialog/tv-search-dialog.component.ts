@@ -46,6 +46,7 @@ export class TvSearchDialogComponent {
           let newEntry: TvDetail = new TvDetail();
           newEntry.title = result.name;
           newEntry.network = result.network;
+          newEntry.status = result.status;
           newEntry.summary = result.overview;
           newEntry.firstDayAired = result.first_air_time;
           newEntry.artworkUrl = result.image_url;

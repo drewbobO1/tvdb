@@ -1,27 +1,6 @@
 <div class="body">
     This is supposed to be a list
-    <!-- <ul>
-        <li
-        *ngFor="let showDetail of this.tvQueryList"
-        >
-            {{showDetail.title}}
-            {{showDetail.network}}
-            {{showDetail.summary}}
-            {{showDetail.firstDayAired}}
-        </li>
-    </ul> -->
-    <!-- <p-dataView #dv [value]="tvQueryList">
-        <ng-template pTemplate="list" let-tvQueryList>
-            <div *ngFor="let result of tvQueryList">
-                <div class="eachTvQueryResult">
-                    <div>{{ result.title }}</div>
-                    <div>{{ result.network }}</div>
-                    <div>{{ result.summary }}</div>
-                    <div>{{ result.firstDayAired }}</div>
-                </div>
-            </div>
-        </ng-template>
-    </p-dataView> -->
+    <app-tv-detail-form />
     <p-button (onClick)="showDialog()" label="Show" />
     <p-dialog header="Search shows" [modal]="true" [(visible)]="dialogVisible" [style]="{ width: '50rem' }">
         <app-tv-search-dialog />

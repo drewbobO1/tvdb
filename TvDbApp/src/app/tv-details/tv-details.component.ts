@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-// import { TvDetailFormComponent } from './tv-detail-form/tv-detail-form.component';
+import { TvDetailFormComponent } from './tv-detail-form/tv-detail-form.component';
 import { OrderListModule } from 'primeng/orderlist';
 import { DataViewModule } from 'primeng/dataview';
 
@@ -24,7 +24,8 @@ import { TvSearchDialogComponent } from '../tv-search-dialog/tv-search-dialog.co
     InputGroupModule,
     InputGroupAddonModule,
     ButtonModule,
-    TvSearchDialogComponent
+    TvSearchDialogComponent,
+    TvDetailFormComponent
   ],
   templateUrl: './tv-details.component.html',
   styleUrls: [
