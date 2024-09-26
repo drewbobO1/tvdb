@@ -67,6 +67,7 @@ export class TvSearchDialogComponent {
   // which I'm not sure I can do (failed a couple times)
   handleResultClick(result: TvDetail) {
     console.log("This should be the object I clicked! ", result);
+    this.service.populateServiceWithQueryResult(result);
     // this.baseForm.title = result.title;
     // this.baseForm.network = result.network;
     // this.baseForm.status = result.status;

@@ -1,16 +1,29 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from '../../environments/environment.development';
-import { Observable } from 'rxjs';
+import { Observable, BehaviorSubject } from 'rxjs';
+import { TvDetail } from './tv-detail.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class TvDetailService {
 
+  constructor(private http: HttpClient, public tvDetail: TvDetail) { }
+
   webApiUrl: string = environment.tvDbWebApiBaseUrl
 
-  constructor(private http: HttpClient) { }
+  tvDataInService: TvDetail = {
+    title: "",
+    network: "",
+    status: "",
+    summary: "",
+    firstDayAired: "",
+    artworkUrl: ""
+  };
+
+  private tvDataInstance = new BehaviorSubject<TvDetail>(this.tvDataInService);
+  currentTvData = this.tvDataInstance.asObservable();
 
   refreshList() {
     this.http.get(this.webApiUrl)
@@ -43,7 +56,16 @@ export class TvDetailService {
   }
 
   // Can I do this in the service class?? Is that what it's for?
-  // populateBaseFormWithQueryResult() {
+  populateServiceWithQueryResult(result: TvDetail) {
+    const newData: TvDetail = {
+      title: result.title,
+      network: result.network,
+      status: result.status,
+      summary: result.summary,
+      firstDayAired: result.firstDayAired,
+      artworkUrl: result.artworkUrl
+    }
 
-  // }
+    this.tvDataInstance.next(newData);
+  }
 }
