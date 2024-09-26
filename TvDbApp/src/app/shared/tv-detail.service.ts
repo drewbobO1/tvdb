@@ -41,4 +41,9 @@ export class TvDetailService {
 
     return this.http.get(`${this.webApiUrl}/search?query=${encodeURIComponent(showTitle)}`, { headers });
   }
+
+  // Can I do this in the service class?? Is that what it's for?
+  // populateBaseFormWithQueryResult() {
+
+  // }
 }

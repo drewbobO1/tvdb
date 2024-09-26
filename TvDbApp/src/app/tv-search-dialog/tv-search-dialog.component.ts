@@ -12,6 +12,8 @@ import { InputGroupAddonModule } from 'primeng/inputgroupaddon';
 
 import { CardModule } from 'primeng/card';
 
+import { TvDetailFormComponent } from '../tv-details/tv-detail-form/tv-detail-form.component';
+
 @Component({
   selector: 'app-tv-search-dialog',
   standalone: true,
@@ -21,7 +23,8 @@ import { CardModule } from 'primeng/card';
     DataViewModule,
     InputGroupModule,
     InputGroupAddonModule,
-    CardModule
+    CardModule,
+    TvDetailFormComponent
   ],
   templateUrl: './tv-search-dialog.component.html',
   styleUrls: [
@@ -60,8 +63,16 @@ export class TvSearchDialogComponent {
     })
   }
 
+  // I don't know how to do this without constructing the form component
+  // which I'm not sure I can do (failed a couple times)
   handleResultClick(result: TvDetail) {
     console.log("This should be the object I clicked! ", result);
+    // this.baseForm.title = result.title;
+    // this.baseForm.network = result.network;
+    // this.baseForm.status = result.status;
+    // this.baseForm.summary = result.summary;
+    // this.baseForm.firstDayAired = result.firstDayAired;
+    // this.baseForm.artworkUrl = result.artworkUrl;
   }
 
 }

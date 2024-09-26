@@ -38,9 +38,6 @@ import { FieldsetModule } from 'primeng/fieldset';
   ],
 })
 export class TvDetailFormComponent {
-  constructor () {
-
-  }
 
   title: string = "";
   network: string = "";
