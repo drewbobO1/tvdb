@@ -36,7 +36,7 @@ export class TvSearchDialogComponent {
   tvQueryList: TvDetail[] = [];
   queryResultData: TvDetail = new TvDetail();
 
-  onSearch(showTitle: string) {
+  handleSearch(showTitle: string) {
     this.service.searchShowList(showTitle, environment.tvDbWebApiAuthKey)
     .subscribe({
       next: res => {
@@ -58,8 +58,8 @@ export class TvSearchDialogComponent {
     })
   }
 
-  onResultClick(result: TvDetail) {
-
+  handleResultClick(result: TvDetail) {
+    console.log("This should be the object I clicked! ", result);
   }
 
 }

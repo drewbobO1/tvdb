@@ -5,7 +5,7 @@
         <button type="button" 
         pButton icon="pi pi-search" 
         class="p-button-secondary"
-        (click)="onSearch(tvTitleQuery.value)"
+        (click)="handleSearch(tvTitleQuery.value)"
         >
         </button>
     </p-inputGroup>
@@ -14,7 +14,7 @@
 <p-dataView #dv [value]="tvQueryList">
     <ng-template pTemplate="list" let-tvQueryList>
         <div *ngFor="let result of tvQueryList">
-            <p-card class="queryResultCard" header={{result.title}}>
+            <p-card class="queryResultCard" header={{result.title}} (click)="handleResultClick(result)">
                 <div>{{ result.network }}</div>
                 <div>{{ result.summary }}</div>
                 <div>{{ result.firstDayAired }}</div>
