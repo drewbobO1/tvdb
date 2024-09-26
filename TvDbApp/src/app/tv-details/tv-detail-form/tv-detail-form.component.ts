@@ -13,6 +13,8 @@ import { CalendarModule } from 'primeng/calendar';
 import { InputTextModule } from 'primeng/inputtext';
 
 import { DropdownModule } from 'primeng/dropdown';
+import { FieldsetModule } from 'primeng/fieldset';
+// import { InputTextModule } from 'primeng/inputtext';
 
 @Component({
   selector: 'app-tv-detail-form',
@@ -26,7 +28,8 @@ import { DropdownModule } from 'primeng/dropdown';
     InputGroupAddonModule,
     CalendarModule,
     InputTextModule,
-    DropdownModule
+    DropdownModule,
+    FieldsetModule
   ],
   templateUrl: './tv-detail-form.component.html',
   styleUrls: [

@@ -24,11 +24,18 @@
                 <label for="float-label">Status</label>
             </p-floatLabel>
         </div>
-        <p-fieldset legend="Summary" [toggleable]="true">
-            <p>
-                `${summary}`
-            </p>
-        </p-fieldset>
+        <div class="single-field">
+            <p-floatLabel>
+                <textarea 
+                    id="summary" 
+                    rows="5" cols="30" 
+                    pInputTextarea
+                    [(ngModel)]="summary"
+                    >
+                </textarea>
+                <label for="summary">Summary</label>
+            </p-floatLabel>
+        </div>
         
         <!-- <div class="single-field">
             Episode length
