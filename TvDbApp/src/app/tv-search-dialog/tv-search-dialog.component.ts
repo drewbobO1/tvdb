@@ -33,7 +33,7 @@ export class TvSearchDialogComponent {
 
   }
 
-  tvQueryList: any = [];
+  tvQueryList: TvDetail[] = [];
   queryResultData: TvDetail = new TvDetail();
 
   onSearch(showTitle: string) {
@@ -56,6 +56,10 @@ export class TvSearchDialogComponent {
         console.error("Show not found: ", err);
       }
     })
+  }
+
+  onResultClick(result: TvDetail) {
+
   }
 
 }
