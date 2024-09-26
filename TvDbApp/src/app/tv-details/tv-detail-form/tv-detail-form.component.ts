@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { CardModule } from 'primeng/card';
@@ -14,6 +14,7 @@ import { InputTextModule } from 'primeng/inputtext';
 
 import { DropdownModule } from 'primeng/dropdown';
 import { FieldsetModule } from 'primeng/fieldset';
+import { TvDetailService } from '../../shared/tv-detail.service';
 // import { InputTextModule } from 'primeng/inputtext';
 
 
@@ -37,7 +38,9 @@ import { FieldsetModule } from 'primeng/fieldset';
     './tv-detail-form.component.css'
   ],
 })
-export class TvDetailFormComponent {
+export class TvDetailFormComponent implements OnInit {
+
+  constructor (public service: TvDetailService) {}
 
   title: string = "";
   network: string = "";
@@ -52,4 +55,18 @@ export class TvDetailFormComponent {
     "Released",
     "Announced"
   ]
+
+  ngOnInit(): void {
+    this.service.currentTvData.subscribe(data => {
+      console.log("This should be data from the observable! ", data);
+
+      this.title = data?.title || "";
+      this.network = data?.network || "";
+      this.status = data?.status || "";
+      this.summary = data?.summary || "";
+      this.firstDayAired = data?.firstDayAired || "";
+      this.artworkUrl = data?.artworkUrl || this.artworkUrl;
+    })
+  }
+
 }
