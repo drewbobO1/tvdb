@@ -44,6 +44,6 @@ export class TvDetailsComponent {
   }
 
   ngOnInit(): void { 
-    this.service.refreshList;
+    this.service.refreshList();
   }
 }
