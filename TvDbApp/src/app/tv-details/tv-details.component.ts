@@ -6,7 +6,6 @@ import { DataViewModule } from 'primeng/dataview';
 
 import { DialogModule } from 'primeng/dialog';
 import { ButtonModule } from 'primeng/button';
-// import { InputTextModule } from 'primeng/inputtext';
 import { InputGroupModule } from 'primeng/inputgroup';
 import { InputGroupAddonModule } from 'primeng/inputgroupaddon';
 
@@ -16,7 +15,6 @@ import { TvSearchDialogComponent } from '../tv-search-dialog/tv-search-dialog.co
   selector: 'app-tv-details',
   standalone: true,
   imports: [
-    // TvDetailFormComponent,
     CommonModule,
     OrderListModule,
     DataViewModule,

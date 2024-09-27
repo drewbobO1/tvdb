@@ -9,7 +9,7 @@ import { TvDetail } from './tv-detail.model';
 })
 export class TvDetailService {
 
-  constructor(private http: HttpClient, public tvDetail: TvDetail) { }
+  constructor(private http: HttpClient) { }
 
   webApiUrl: string = environment.tvDbWebApiBaseUrl
 

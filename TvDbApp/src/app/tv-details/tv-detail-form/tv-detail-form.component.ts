@@ -15,7 +15,6 @@ import { InputTextModule } from 'primeng/inputtext';
 import { DropdownModule } from 'primeng/dropdown';
 import { FieldsetModule } from 'primeng/fieldset';
 import { TvDetailService } from '../../shared/tv-detail.service';
-// import { InputTextModule } from 'primeng/inputtext';
 
 
 @Component({
