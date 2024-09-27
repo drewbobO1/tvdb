@@ -12,6 +12,7 @@ export class TvDetailService {
   constructor(private http: HttpClient) { }
 
   webApiUrl: string = environment.tvDbWebApiBaseUrl
+  sqlDbApiUrl: string = environment.sqlDbApiUrl;
 
   tvDataInService: TvDetail = {
     title: "",
@@ -25,8 +26,10 @@ export class TvDetailService {
   private tvDataInstance = new BehaviorSubject<TvDetail>(this.tvDataInService);
   currentTvData = this.tvDataInstance.asObservable();
 
+  getUrlForSqlDb = this.sqlDbApiUrl+"/TvDetail";
+
   refreshList() {
-    this.http.get(this.webApiUrl)
+    this.http.get(this.getUrlForSqlDb)
     .subscribe({
       next: res => {
         console.log("Res: ", res);
