@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TvDetailFormComponent } from './tv-detail-form/tv-detail-form.component';
 import { OrderListModule } from 'primeng/orderlist';
@@ -10,6 +10,8 @@ import { InputGroupModule } from 'primeng/inputgroup';
 import { InputGroupAddonModule } from 'primeng/inputgroupaddon';
 
 import { TvSearchDialogComponent } from '../tv-search-dialog/tv-search-dialog.component';
+
+import { TvDetailService } from '../shared/tv-detail.service';
 
 @Component({
   selector: 'app-tv-details',
@@ -32,10 +34,16 @@ import { TvSearchDialogComponent } from '../tv-search-dialog/tv-search-dialog.co
 })
 export class TvDetailsComponent {
 
+  constructor(public service: TvDetailService) { }
+
   tvQueryList: any = [];
   dialogVisible: boolean = false;
 
   showDialog() {
     this.dialogVisible = true;
+  }
+
+  ngOnInit(): void { 
+    this.service.refreshList;
   }
 }

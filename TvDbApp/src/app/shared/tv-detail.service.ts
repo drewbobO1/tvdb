@@ -28,7 +28,9 @@ export class TvDetailService {
 
   getUrlForSqlDb = this.sqlDbApiUrl+"/TvDetail";
 
+  // Not working rn
   refreshList() {
+    console.log("Refresh list working");
     this.http.get(this.getUrlForSqlDb)
     .subscribe({
       next: res => {
