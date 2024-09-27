@@ -10,19 +10,19 @@ public class TvDetail
 
     [Column(TypeName = "nvarchar(100)")]
     public string TvTitle { get; set; } = "";
+    
+    [Column(TypeName = "nvarchar(50)")]
+    public string Network { get; set; } = "";
 
+    [Column(TypeName = "nvarchar(11)")]
+    public string Status { get; set; } = "";
+
+    [Column(TypeName = "nvarchar(500)")]
+    public string Summary { get; set; } = "";
+
+    [Column(TypeName = "nvarchar(11)")]
+    public string FirstDayAired { get; set; } = "";
+    
     [Column(TypeName = "nvarchar(100)")]
     public string ArtLink { get; set; } = "";
-
-    [Column(TypeName = "nvarchar(3)")]
-    public string EpisodeQty { get; set; } = "";
-
-    [Column(TypeName = "nvarchar(10)")]
-    public string EpisodeRuntime { get; set; } = "";
-
-    [Column(TypeName = "nvarchar(4)")]
-    public string StartYear { get; set; } = "";
-
-    [Column(TypeName = "nvarchar(4)")]
-    public string EndYear { get; set; } = "";
 }
