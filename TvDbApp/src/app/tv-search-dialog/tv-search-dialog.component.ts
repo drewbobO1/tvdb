@@ -51,7 +51,7 @@ export class TvSearchDialogComponent {
           newEntry.network = result.network;
           newEntry.status = result.status;
           newEntry.summary = result.overview;
-          newEntry.firstDayAired = result.first_air_time;
+          newEntry.firstDayAired = this.reformatDate(result.first_air_time);
           newEntry.artworkUrl = result.image_url;
           
           this.tvQueryList.push(newEntry);
@@ -63,8 +63,19 @@ export class TvSearchDialogComponent {
     })
   }
 
+  reformatDate(date: string) {
+    const year = date.slice(0,4);
+    const month = date.slice(5,7);
+    const day = date.slice(8);
+
+    const reformattedDate = `${month}/${day}/${year}`; 
+
+    return reformattedDate;
+  }
+
   handleResultClick(result: TvDetail) {
     console.log("This should be the object I clicked! ", result);
+    this.reformatDate(result.firstDayAired);
     this.service.populateServiceWithQueryResult(result);
   }
 
