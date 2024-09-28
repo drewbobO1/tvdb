@@ -48,7 +48,7 @@ export class TvDetailFormComponent implements OnInit {
   firstDayAired: string = "";
   artworkUrl: string = "https://apps.uwm.edu/docs/wp-content/uploads/dafoe-USE-THIS-ONLY-NEW-AS-OF-APR-15-HEADSHOT-DAFOE_WILLEM2_OK-Narrative-041922-scaled.jpeg";
 
-  statusOptions = [
+  statusOptions: string[] = [
     "Continuing",
     "Ended",
     "Released",

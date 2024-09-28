@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("tvdbAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+672039cc964c5ee3499c3cd5a2ce9f77f5356b99")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b02d9bcc0157144aad72aac8bd17040ad0a7cabf")]
 [assembly: System.Reflection.AssemblyProductAttribute("tvdbAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("tvdbAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -9,7 +9,7 @@ public class TvDetail
     public int TvDetailId { get; set; }
 
     [Column(TypeName = "nvarchar(100)")]
-    public string TvTitle { get; set; } = "";
+    public string Title { get; set; } = "";
     
     [Column(TypeName = "nvarchar(50)")]
     public string Network { get; set; } = "";
@@ -24,5 +24,5 @@ public class TvDetail
     public string FirstDayAired { get; set; } = "";
     
     [Column(TypeName = "nvarchar(100)")]
-    public string ArtLink { get; set; } = "";
+    public string ArtworkUrl { get; set; } = "";
 }
