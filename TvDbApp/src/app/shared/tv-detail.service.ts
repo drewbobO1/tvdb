@@ -32,11 +32,11 @@ export class TvDetailService {
   formDataToPush: TvDetail = new TvDetail();
 
 
-  getUrlForSqlDb = this.sqlDbApiUrl+"/TvDetail";
+  getAndPutUrlForSqlDb = this.sqlDbApiUrl+"/TvDetail";
 
   refreshList() {
     console.log("Refresh list working");
-    this.http.get(this.getUrlForSqlDb)
+    this.http.get(this.getAndPutUrlForSqlDb)
     .subscribe({
       next: res => {
         console.log("Res: ", res);
@@ -84,6 +84,6 @@ export class TvDetailService {
   // ==================================
 
   postTvDetail() {
-    return this.http.post(this.sqlDbApiUrl, this.formDataToPush)
+    return this.http.post(this.getAndPutUrlForSqlDb, this.formDataToPush)
   }
 }

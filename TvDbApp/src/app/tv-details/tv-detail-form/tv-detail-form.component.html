@@ -5,10 +5,7 @@
             <input type="hidden" name="tvDetailId" [value]="service.formDataToPush.tvDetailId">
 
             <div class="single-field">
-                <img class="tv-image" src="{{service.formDataToPush.artworkUrl}}" alt=""
-                #artworkUrl="ngModel" name="artworkUrl"
-                [(ngModel)]="service.formDataToPush.artworkUrl"
-                >
+                <img class="tv-image" [src]="service.formDataToPush.artworkUrl" alt="TV Poster">
             </div>
             <div class="single-field">
                 <p-floatLabel>
@@ -66,7 +63,8 @@
                     <label for="icondisplay">First day aired</label>
                 </p-floatLabel>
             </div>
-            <p-button label="Submit" (onClick)="onSubmit"/>
+            <p-button label="Submit" (onClick)="onSubmit(tvForm)"/>
+             <!-- <button type="submit">Submit!</button> -->
         </form>
     </p-card>
 </div>
