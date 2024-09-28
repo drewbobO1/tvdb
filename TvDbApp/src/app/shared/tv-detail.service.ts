@@ -15,6 +15,7 @@ export class TvDetailService {
   sqlDbApiUrl: string = environment.sqlDbApiUrl;
 
   tvDataInService: TvDetail = {
+    // tvDetailId: 0,
     title: "",
     network: "",
     status: "",
