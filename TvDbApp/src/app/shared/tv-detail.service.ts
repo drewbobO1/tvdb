@@ -71,4 +71,12 @@ export class TvDetailService {
 
     this.tvDataInstance.next(newData);
   }
+
+  // ==================================
+  //       LOCAL DB API FUNCTIONS
+  // ==================================
+
+  postTvDetail() {
+    return this.http.post(this.sqlDbApiUrl, this.formDataToPush)
+  }
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, NgForm } from '@angular/forms';
 
 import { CardModule } from 'primeng/card';
 
@@ -17,6 +17,7 @@ import { FieldsetModule } from 'primeng/fieldset';
 import { TvDetailService } from '../../shared/tv-detail.service';
 
 import { ButtonModule } from 'primeng/button';
+import { TvDetail } from '../../shared/tv-detail.model';
 
 
 @Component({
@@ -70,5 +71,46 @@ export class TvDetailFormComponent implements OnInit {
       this.artworkUrl = data?.artworkUrl || this.artworkUrl;
     })
   }
+
+  onSubmit(form: NgForm) {
+    // this.service.formSubmitted = true;
+
+    if (form.valid) {
+      if (this.service.formDataToPush.tvDetailId == 0) {
+        this.insertRecord(form);
+      }
+      else {
+        console.log("Form id field value not 0");
+        // this.updateRecord(form);
+      }
+    }
+    else {
+      console.log("Please fill out all fields as required");
+    }
+  }
+
+  insertRecord(form: NgForm) {
+    this.service.postTvDetail()
+      .subscribe({
+        next:res=>{
+          this.service.addedTvList = res as TvDetail[];
+          // this.service.resetForm(form);
+          // this.toastr.success("Card data submitted!", "Payment Detail Register");
+        },
+        error: err => {console.error(err);}
+      })
+  }
+  
+  // updateRecord(form: NgForm) {
+  //   this.service.putPaymentDetail()
+  //     .subscribe({
+  //       next:res=>{
+  //         this.service.list = res as PaymentDetail[];
+  //         this.service.resetForm(form);
+  //         this.toastr.info("Card data updated!", "Payment Detail Register");
+  //       },
+  //       error: err => {console.error(err);}
+  //     })
+  // }
 
 }
