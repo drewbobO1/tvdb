@@ -32,6 +32,7 @@ import { TvDetail } from '../shared/tv-detail.model';
   ],
   templateUrl: './tv-details.component.html',
   styleUrls: [
+    '../../styles.css',
     './tv-details.component.css'
   ],
 })

@@ -1,55 +1,66 @@
 <div class="form-body">
     <p>tv-detail-form works!</p>
     <p-card header="Show Details">
-        <div class="single-field">
-            <img class="tv-image" src="{{artworkUrl}}" alt="">
-        </div>
-        <div class="single-field">
-            <p-floatLabel>
-                <input id="title" type="text" pInputText [(ngModel)]="title" variant="filled"/>
-                <label for="title">Title</label>
-            </p-floatLabel>
-        </div>
-        <div class="single-field">
-            <p-floatLabel>
-                <input id="network" type="text" pInputText [(ngModel)]="network" variant="filled"/>
-                <label for="network">Network</label>
-            </p-floatLabel>
-        </div>
-        <div class="single-field">
-            <p-floatLabel>
-                <p-dropdown 
-                    [options]="statusOptions"
-                    [(ngModel)]="status"
-                    [showClear]="true" 
-                    variant="filled"
-                    inputId="float-label" />
-                <label for="float-label">Status</label>
-            </p-floatLabel>
-        </div>
-        <div class="single-field">
-            <p-floatLabel>
-                <textarea 
-                    id="summary" 
-                    rows="5" cols="30" 
-                    pInputTextarea
-                    [(ngModel)]="summary"
-                    >
-                </textarea>
-                <label for="summary">Summary</label>
-            </p-floatLabel>
-        </div>
-        <div class="single-field">
-            <p-floatLabel>
-                <p-calendar 
-                    [(ngModel)]="firstDayAired" 
-                    [iconDisplay]="'input'" 
-                    [showIcon]="true" 
-                    inputId="icondisplay" 
-                />
-                <label for="icondisplay">First day aired</label>
-            </p-floatLabel>
-        </div>
-        
+        <form>
+            <div class="single-field">
+                <img class="tv-image" src="{{artworkUrl}}" alt="">
+            </div>
+            <div class="single-field">
+                <p-floatLabel>
+                    <input id="title" type="text" pInputText variant="filled"
+                    #title="ngModel" name="title"
+                    [(ngModel)]="service.formDataToPush.title"
+                    required
+                    />
+                    <label for="title">Title</label>
+                </p-floatLabel>
+            </div>
+            <div class="single-field">
+                <p-floatLabel>
+                    <input id="network" type="text" pInputText variant="filled"
+                    #network="ngModel" name="network"
+                    [(ngModel)]="service.formDataToPush.network"
+                    />
+                    <label for="network">Network</label>
+                </p-floatLabel>
+            </div>
+            <div class="single-field">
+                <p-floatLabel>
+                    <p-dropdown 
+                        [options]="statusOptions"
+                        [showClear]="true" variant="filled"
+                        inputId="float-label" 
+                        #status="ngModel" name="status"
+                        [(ngModel)]="service.formDataToPush.status"
+                        />
+                    <label for="float-label">Status</label>
+                </p-floatLabel>
+            </div>
+            <div class="single-field">
+                <p-floatLabel>
+                    <textarea 
+                        id="summary" 
+                        rows="5" cols="30" 
+                        pInputTextarea
+                        #summary="ngModel" name="summary"
+                        [(ngModel)]="service.formDataToPush.summary"
+                        >
+                    </textarea>
+                    <label for="summary">Summary</label>
+                </p-floatLabel>
+            </div>
+            <div class="single-field">
+                <p-floatLabel>
+                    <p-calendar 
+                        [iconDisplay]="'input'" 
+                        [showIcon]="true" 
+                        inputId="icondisplay"
+                        #firstDayAired="ngModel" name="firstDayAired"
+                        [(ngModel)]="service.formDataToPush.firstDayAired"
+                    />
+                    <label for="icondisplay">First day aired</label>
+                </p-floatLabel>
+            </div>
+        </form>
     </p-card>
 </div>

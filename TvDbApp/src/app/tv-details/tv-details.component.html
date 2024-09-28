@@ -1,11 +1,5 @@
 <div class="body">
     This is supposed to be a list
-    <app-tv-detail-form />
-    <p-button (onClick)="showDialog()" label="Show" />
-    <p-dialog header="Search shows" [modal]="true" [(visible)]="dialogVisible" [style]="{ width: '50rem' }">
-        <app-tv-search-dialog />
-    </p-dialog>
-
     <p-dataView #dv [value]="service.addedTvList">
         <ng-template pTemplate="list" let-addedTvList>
             <div *ngFor="let result of service.addedTvList">
@@ -18,4 +12,10 @@
             </div>
         </ng-template>
     </p-dataView>
+    <app-tv-detail-form />
+    <p-button (onClick)="showDialog()" label="Show" />
+    <p-dialog header="Search shows" [modal]="true" [(visible)]="dialogVisible" [style]="{ width: '50rem' }">
+        <app-tv-search-dialog />
+    </p-dialog>
+
 </div>
