@@ -16,6 +16,8 @@ import { DropdownModule } from 'primeng/dropdown';
 import { FieldsetModule } from 'primeng/fieldset';
 import { TvDetailService } from '../../shared/tv-detail.service';
 
+import { ButtonModule } from 'primeng/button';
+
 
 @Component({
   selector: 'app-tv-detail-form',
@@ -30,7 +32,8 @@ import { TvDetailService } from '../../shared/tv-detail.service';
     CalendarModule,
     InputTextModule,
     DropdownModule,
-    FieldsetModule
+    FieldsetModule,
+    ButtonModule
   ],
   templateUrl: './tv-detail-form.component.html',
   styleUrls: [

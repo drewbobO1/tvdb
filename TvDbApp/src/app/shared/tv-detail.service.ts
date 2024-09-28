@@ -29,6 +29,8 @@ export class TvDetailService {
 
   addedTvList: TvDetail[] = [];
 
+  formDataToPush: TvDetail = new TvDetail();
+
 
   getUrlForSqlDb = this.sqlDbApiUrl+"/TvDetail";
 
