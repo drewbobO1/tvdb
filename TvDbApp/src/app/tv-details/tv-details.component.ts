@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { TvDetailFormComponent } from './tv-detail-form/tv-detail-form.component';
 import { OrderListModule } from 'primeng/orderlist';
 import { DataViewModule } from 'primeng/dataview';
+import { CardModule } from 'primeng/card';
 
 import { DialogModule } from 'primeng/dialog';
 import { ButtonModule } from 'primeng/button';
@@ -12,6 +13,7 @@ import { InputGroupAddonModule } from 'primeng/inputgroupaddon';
 import { TvSearchDialogComponent } from '../tv-search-dialog/tv-search-dialog.component';
 
 import { TvDetailService } from '../shared/tv-detail.service';
+import { TvDetail } from '../shared/tv-detail.model';
 
 @Component({
   selector: 'app-tv-details',
@@ -25,7 +27,8 @@ import { TvDetailService } from '../shared/tv-detail.service';
     InputGroupAddonModule,
     ButtonModule,
     TvSearchDialogComponent,
-    TvDetailFormComponent
+    TvDetailFormComponent,
+    CardModule
   ],
   templateUrl: './tv-details.component.html',
   styleUrls: [
@@ -36,7 +39,7 @@ export class TvDetailsComponent {
 
   constructor(public service: TvDetailService) { }
 
-  tvQueryList: any = [];
+  addedTvList: any[] = [];
   dialogVisible: boolean = false;
 
   showDialog() {
@@ -44,6 +47,6 @@ export class TvDetailsComponent {
   }
 
   ngOnInit(): void { 
-    this.service.refreshList();
+    this.addedTvList.push(this.service.refreshList());
   }
 }

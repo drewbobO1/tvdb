@@ -5,4 +5,17 @@
     <p-dialog header="Search shows" [modal]="true" [(visible)]="dialogVisible" [style]="{ width: '50rem' }">
         <app-tv-search-dialog />
     </p-dialog>
+
+    <p-dataView #dv [value]="addedTvList">
+        <ng-template pTemplate="list" let-addedTvList>
+            <div *ngFor="let result of addedTvList">
+                <p-card class="queryResultCard" header={{result.title}}>
+                    <div>{{ result.network }}</div>
+                    <div>{{ result.status }}</div>
+                    <div>{{ result.summary }}</div>
+                    <div>{{ result.firstDayAired }}</div>
+                </p-card>
+            </div>
+        </ng-template>
+    </p-dataView>
 </div>

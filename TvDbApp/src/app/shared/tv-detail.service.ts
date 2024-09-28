@@ -28,30 +28,22 @@ export class TvDetailService {
 
   getUrlForSqlDb = this.sqlDbApiUrl+"/TvDetail";
 
-  // Not working rn
   refreshList() {
     console.log("Refresh list working");
     this.http.get(this.getUrlForSqlDb)
     .subscribe({
       next: res => {
         console.log("Res: ", res);
+        return res;
       },
       error: err => {
         console.error("There was an error: ", err);
+        return null;
       }
     })
   }
 
   searchShowList(showTitle: string, authToken: string): Observable<any> {
-    // this.http.get(this.webApiUrl+"/search?query="+showTitle)
-    // .subscribe({
-    //   next: res => {
-    //     console.log("Show found: ", res);
-    //   },
-    //   error: err => {
-    //     console.error("Show not found: ", err);
-    //   }
-    // })
     const headers = new HttpHeaders({
       "Authorization": `Bearer ${authToken}`,
       "accept": "application/json",
@@ -60,7 +52,6 @@ export class TvDetailService {
     return this.http.get(`${this.webApiUrl}/search?query=${encodeURIComponent(showTitle)}`, { headers });
   }
 
-  // Can I do this in the service class?? Is that what it's for?
   populateServiceWithQueryResult(result: TvDetail) {
     const newData: TvDetail = {
       title: result.title,
