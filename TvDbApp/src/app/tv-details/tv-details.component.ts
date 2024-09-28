@@ -47,6 +47,6 @@ export class TvDetailsComponent {
   }
 
   ngOnInit(): void { 
-    this.addedTvList.push(this.service.refreshList());
+    console.log("This is what the refresh list call in the details component returns: ", this.service.refreshList());
   }
 }

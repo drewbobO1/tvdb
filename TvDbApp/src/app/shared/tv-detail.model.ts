@@ -1,4 +1,5 @@
 export class TvDetail {
+    tvDetailId: number = 0;
     title: string = "";
     network: string = "";
     status: string = "";
