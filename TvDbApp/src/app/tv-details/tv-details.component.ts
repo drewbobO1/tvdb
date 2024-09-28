@@ -48,6 +48,6 @@ export class TvDetailsComponent {
 
   ngOnInit(): void { 
     console.log("This is what the addedTvList in the details component returns: ", this.service.addedTvList);
-    
+    this.service.refreshList();
   }
 }

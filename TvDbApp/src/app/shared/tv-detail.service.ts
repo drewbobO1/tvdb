@@ -15,7 +15,7 @@ export class TvDetailService {
   sqlDbApiUrl: string = environment.sqlDbApiUrl;
 
   tvDataInService: TvDetail = {
-    // tvDetailId: 0,
+    tvDetailId: 0,
     title: "",
     network: "",
     status: "",
@@ -58,6 +58,7 @@ export class TvDetailService {
 
   populateServiceWithQueryResult(result: TvDetail) {
     const newData: TvDetail = {
+      tvDetailId: 0,
       title: result.title,
       network: result.network,
       status: result.status,
