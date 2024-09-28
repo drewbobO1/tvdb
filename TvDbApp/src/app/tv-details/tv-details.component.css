@@ -3,3 +3,7 @@
     flex-direction: row-reverse;
 }
 
+.listImg {
+    width: 2rem;
+    height: 3rem;
+}
