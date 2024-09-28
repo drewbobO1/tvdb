@@ -3,6 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from '../../environments/environment.development';
 import { Observable, BehaviorSubject } from 'rxjs';
 import { TvDetail } from './tv-detail.model';
+import { NgForm } from '@angular/forms';
 
 @Injectable({
   providedIn: 'root'
@@ -30,9 +31,10 @@ export class TvDetailService {
   addedTvList: TvDetail[] = [];
 
   formDataToPush: TvDetail = new TvDetail();
-
+  formSubmitted: boolean = false;
 
   getAndPutUrlForSqlDb = this.sqlDbApiUrl+"/TvDetail";
+  
 
   refreshList() {
     console.log("Refresh list working");
@@ -85,5 +87,11 @@ export class TvDetailService {
 
   postTvDetail() {
     return this.http.post(this.getAndPutUrlForSqlDb, this.formDataToPush)
+  }
+
+  resetForm(form: NgForm) {
+    form.form.reset();
+    this.formDataToPush = new TvDetail();
+    this.formSubmitted = false;
   }
 }

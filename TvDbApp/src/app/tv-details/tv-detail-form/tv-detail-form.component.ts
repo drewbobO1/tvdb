@@ -73,11 +73,13 @@ export class TvDetailFormComponent implements OnInit {
   }
 
   onSubmit(form: NgForm) {
-    // this.service.formSubmitted = true;
+    this.service.formSubmitted = true;
 
     if (form.valid) {
       if (this.service.formDataToPush.tvDetailId == 0) {
         this.insertRecord(form);
+        this.service.resetForm(form);
+
       }
       else {
         console.log("Form id field value not 0");
@@ -94,7 +96,7 @@ export class TvDetailFormComponent implements OnInit {
       .subscribe({
         next:res=>{
           this.service.addedTvList = res as TvDetail[];
-          // this.service.resetForm(form);
+          this.service.resetForm(form);
           // this.toastr.success("Card data submitted!", "Payment Detail Register");
         },
         error: err => {console.error(err);}
