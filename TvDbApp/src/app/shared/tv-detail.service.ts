@@ -59,17 +59,24 @@ export class TvDetailService {
   }
 
   populateServiceWithQueryResult(result: TvDetail) {
-    const newData: TvDetail = {
-      tvDetailId: 0,
-      title: result.title,
-      network: result.network,
-      status: result.status,
-      summary: result.summary,
-      firstDayAired: result.firstDayAired,
-      artworkUrl: result.artworkUrl
-    }
+    // const newData: TvDetail = {
+    //   tvDetailId: 0,
+    //   title: result.title,
+    //   network: result.network,
+    //   status: result.status,
+    //   summary: result.summary,
+    //   firstDayAired: result.firstDayAired,
+    //   artworkUrl: result.artworkUrl
+    // }
 
-    this.tvDataInstance.next(newData);
+    // this.tvDataInstance.next(newData);
+    this.formDataToPush.tvDetailId = result.tvDetailId;
+    this.formDataToPush.title = result.title;
+    this.formDataToPush.network = result.network;
+    this.formDataToPush.status = result.status;
+    this.formDataToPush.summary = result.summary;
+    this.formDataToPush.firstDayAired = result.firstDayAired;
+    this.formDataToPush.artworkUrl = result.artworkUrl;
   }
 
   // ==================================

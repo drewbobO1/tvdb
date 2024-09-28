@@ -5,7 +5,10 @@
             <input type="hidden" name="tvDetailId" [value]="service.formDataToPush.tvDetailId">
 
             <div class="single-field">
-                <img class="tv-image" src="{{artworkUrl}}" alt="">
+                <img class="tv-image" src="{{service.formDataToPush.artworkUrl}}" alt=""
+                #artworkUrl="ngModel" name="artworkUrl"
+                [(ngModel)]="service.formDataToPush.artworkUrl"
+                >
             </div>
             <div class="single-field">
                 <p-floatLabel>
