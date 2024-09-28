@@ -6,9 +6,9 @@
         <app-tv-search-dialog />
     </p-dialog>
 
-    <p-dataView #dv [value]="addedTvList">
+    <p-dataView #dv [value]="service.addedTvList">
         <ng-template pTemplate="list" let-addedTvList>
-            <div *ngFor="let result of addedTvList">
+            <div *ngFor="let result of service.addedTvList">
                 <p-card class="queryResultCard" header={{result.title}}>
                     <div>{{ result.network }}</div>
                     <div>{{ result.status }}</div>

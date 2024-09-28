@@ -27,6 +27,9 @@ export class TvDetailService {
   private tvDataInstance = new BehaviorSubject<TvDetail>(this.tvDataInService);
   currentTvData = this.tvDataInstance.asObservable();
 
+  addedTvList: TvDetail[] = [];
+
+
   getUrlForSqlDb = this.sqlDbApiUrl+"/TvDetail";
 
   refreshList() {
@@ -35,7 +38,7 @@ export class TvDetailService {
     .subscribe({
       next: res => {
         console.log("Res: ", res);
-        return res;
+        this.addedTvList = res as TvDetail[];
       },
       error: err => {
         console.error("There was an error: ", err);

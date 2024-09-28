@@ -39,7 +39,7 @@ export class TvDetailsComponent {
 
   constructor(public service: TvDetailService) { }
 
-  addedTvList: any[] = [];
+  userTvList: any[] = [];
   dialogVisible: boolean = false;
 
   showDialog() {
@@ -47,6 +47,7 @@ export class TvDetailsComponent {
   }
 
   ngOnInit(): void { 
-    console.log("This is what the refresh list call in the details component returns: ", this.service.refreshList());
+    console.log("This is what the addedTvList in the details component returns: ", this.service.addedTvList);
+    
   }
 }
