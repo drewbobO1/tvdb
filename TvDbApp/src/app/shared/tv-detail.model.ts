@@ -5,5 +5,5 @@ export class TvDetail {
     status: string = "";
     summary: string = "";
     firstDayAired: string = "";
-    artworkUrl: string = "";
+    artworkUrl: string = "posterAlt.png";
 }

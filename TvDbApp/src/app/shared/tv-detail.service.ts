@@ -22,7 +22,7 @@ export class TvDetailService {
     status: "",
     summary: "",
     firstDayAired: "",
-    artworkUrl: ""
+    artworkUrl: "../../../public/posterAlt.png"
   };
 
   private tvDataInstance = new BehaviorSubject<TvDetail>(this.tvDataInService);
