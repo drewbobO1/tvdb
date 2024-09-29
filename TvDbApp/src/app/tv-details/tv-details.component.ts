@@ -54,7 +54,7 @@ export class TvDetailsComponent {
 
   onDelete(id: number) {
     if (confirm("Are you sure you'd like to delete this card?")) {
-      this.service.deletePaymentDetail(id)
+      this.service.deleteTvDetail(id)
       .subscribe({
         next:res=>{
           this.service.addedTvList = res as TvDetail[];
