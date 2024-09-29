@@ -45,33 +45,12 @@ export class TvDetailFormComponent {
 
   constructor (public service: TvDetailService) {}
 
-  title: string = "";
-  network: string = "";
-  status: string = "";
-  summary: string = "";
-  firstDayAired: string = "";
-  artworkUrl: string = "https://apps.uwm.edu/docs/wp-content/uploads/dafoe-USE-THIS-ONLY-NEW-AS-OF-APR-15-HEADSHOT-DAFOE_WILLEM2_OK-Narrative-041922-scaled.jpeg";
-
   statusOptions: string[] = [
     "Continuing",
     "Ended",
     "Released",
     "Announced"
   ]
-
-
-  // ngOnInit(): void {
-  //   this.service.currentTvData.subscribe(data => {
-  //     console.log("This should be data from the observable! ", data);
-
-  //     this.title = data?.title || "";
-  //     this.network = data?.network || "";
-  //     this.status = data?.status || "";
-  //     this.summary = data?.summary || "";
-  //     this.firstDayAired = data?.firstDayAired || "";
-  //     this.artworkUrl = data?.artworkUrl || this.artworkUrl;
-  //   })
-  // }
 
   onSubmit(form: NgForm) {
     this.service.formSubmitted = true;
