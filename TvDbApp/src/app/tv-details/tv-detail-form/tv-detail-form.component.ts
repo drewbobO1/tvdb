@@ -83,7 +83,7 @@ export class TvDetailFormComponent implements OnInit {
       }
       else {
         console.log("Form id field value not 0");
-        // this.updateRecord(form);
+        this.updateRecord(form);
       }
     }
     else {
@@ -103,16 +103,16 @@ export class TvDetailFormComponent implements OnInit {
       })
   }
   
-  // updateRecord(form: NgForm) {
-  //   this.service.putPaymentDetail()
-  //     .subscribe({
-  //       next:res=>{
-  //         this.service.list = res as PaymentDetail[];
-  //         this.service.resetForm(form);
-  //         this.toastr.info("Card data updated!", "Payment Detail Register");
-  //       },
-  //       error: err => {console.error(err);}
-  //     })
-  // }
+  updateRecord(form: NgForm) {
+    this.service.putTvDetail()
+      .subscribe({
+        next:res=>{
+          this.service.addedTvList = res as TvDetail[];
+          this.service.resetForm(form);
+          // this.toastr.info("Card data updated!", "Payment Detail Register");
+        },
+        error: err => {console.error(err);}
+      })
+  }
 
 }

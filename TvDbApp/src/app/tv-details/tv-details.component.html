@@ -3,7 +3,9 @@
     <p-dataView #dv [value]="service.addedTvList">
         <ng-template pTemplate="list" let-addedTvList>
             <div *ngFor="let result of service.addedTvList">
-                <p-card class="queryResultCard" header={{result.title}}>
+                <p-card class="queryResultCard" header={{result.title}}
+                (click)="populateForm(result)"
+                >
                     <div class="listImgContainer">
                         <img class="listImg" src="{{ result.artworkUrl }}" alt="">
                     </div>

@@ -89,6 +89,10 @@ export class TvDetailService {
     return this.http.post(this.getAndPutUrlForSqlDb, this.formDataToPush);
   }
 
+  putTvDetail() {
+    return this.http.put(this.getAndPutUrlForSqlDb+'/'+this.formDataToPush.tvDetailId, this.formDataToPush);
+  }
+
   deleteTvDetail(id: number) {
     return this.http.delete(this.getAndPutUrlForSqlDb+'/'+id);
   }

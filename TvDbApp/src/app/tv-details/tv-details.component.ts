@@ -52,6 +52,10 @@ export class TvDetailsComponent {
     this.service.refreshList();
   }
 
+  populateForm(selectedRecord: TvDetail) {
+    this.service.formDataToPush = Object.assign({}, selectedRecord);
+  }
+
   onDelete(id: number) {
     if (confirm("Are you sure you'd like to delete this card?")) {
       this.service.deleteTvDetail(id)
