@@ -1,4 +1,7 @@
 .body {
+    border: 2px solid hotpink;
+
+    margin-top: 500px;
     display: flex;
     flex-direction: row-reverse;
 }
@@ -6,4 +9,14 @@
 .listImg {
     width: 2rem;
     height: 3rem;
+}
+
+.tvCardListContainer {
+    /* border: 2px solid hotpink; */
+    max-width: 750px;
+}
+
+.singleTvCardContainer {
+    /* border: 2px solid hotpink; */
+    margin: 1rem 0;
 }
