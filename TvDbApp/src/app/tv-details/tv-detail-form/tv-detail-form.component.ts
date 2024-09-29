@@ -41,7 +41,7 @@ import { TvDetail } from '../../shared/tv-detail.model';
     './tv-detail-form.component.css'
   ],
 })
-export class TvDetailFormComponent implements OnInit {
+export class TvDetailFormComponent {
 
   constructor (public service: TvDetailService) {}
 
@@ -59,18 +59,19 @@ export class TvDetailFormComponent implements OnInit {
     "Announced"
   ]
 
-  ngOnInit(): void {
-    this.service.currentTvData.subscribe(data => {
-      console.log("This should be data from the observable! ", data);
 
-      this.title = data?.title || "";
-      this.network = data?.network || "";
-      this.status = data?.status || "";
-      this.summary = data?.summary || "";
-      this.firstDayAired = data?.firstDayAired || "";
-      this.artworkUrl = data?.artworkUrl || this.artworkUrl;
-    })
-  }
+  // ngOnInit(): void {
+  //   this.service.currentTvData.subscribe(data => {
+  //     console.log("This should be data from the observable! ", data);
+
+  //     this.title = data?.title || "";
+  //     this.network = data?.network || "";
+  //     this.status = data?.status || "";
+  //     this.summary = data?.summary || "";
+  //     this.firstDayAired = data?.firstDayAired || "";
+  //     this.artworkUrl = data?.artworkUrl || this.artworkUrl;
+  //   })
+  // }
 
   onSubmit(form: NgForm) {
     this.service.formSubmitted = true;
