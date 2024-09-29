@@ -51,4 +51,17 @@ export class TvDetailsComponent {
     console.log("This is what the addedTvList in the details component returns: ", this.service.addedTvList);
     this.service.refreshList();
   }
+
+  onDelete(id: number) {
+    if (confirm("Are you sure you'd like to delete this card?")) {
+      this.service.deletePaymentDetail(id)
+      .subscribe({
+        next:res=>{
+          this.service.addedTvList = res as TvDetail[];
+          // this.toastr.error("Show data deleted!", "Payment Detail Register");
+        },
+        error: err => {console.error(err);}
+      })
+    }
+  }
 }

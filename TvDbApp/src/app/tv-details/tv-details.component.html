@@ -11,6 +11,11 @@
                     <div>{{ result.status }}</div>
                     <div>{{ result.summary }}</div>
                     <div>{{ result.firstDayAired }}</div>
+                    <span>
+                        <i class="fa-regular fa-trash-can fa-lg mouse-hover"
+                        (click)="onDelete(result.tvDetailId)"
+                        ></i>
+                    </span>
                 </p-card>
             </div>
         </ng-template>

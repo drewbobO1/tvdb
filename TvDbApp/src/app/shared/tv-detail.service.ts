@@ -86,7 +86,11 @@ export class TvDetailService {
   // ==================================
 
   postTvDetail() {
-    return this.http.post(this.getAndPutUrlForSqlDb, this.formDataToPush)
+    return this.http.post(this.getAndPutUrlForSqlDb, this.formDataToPush);
+  }
+
+  deletePaymentDetail(id: number) {
+    return this.http.delete(this.getAndPutUrlForSqlDb+'/'+id);
   }
 
   resetForm(form: NgForm) {
