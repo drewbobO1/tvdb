@@ -1,25 +1,28 @@
 <div class="body">
     <!-- <p-dataView #dv [value]="service.addedTvList"> -->
         <!-- <ng-template pTemplate="list" let-addedTvList> -->
-            <div class="tvCardListContainer">
-                <div class="singleTvCardContainer" *ngFor="let result of service.addedTvList">
-                    <p-card class="queryResultCard" header={{result.title}}
-                    (click)="populateForm(result)"
-                    >
-                        <div class="listImgContainer">
-                            <img class="listImg" src="{{ result.artworkUrl }}" alt="">
-                        </div>
-                        <div>{{ result.network }}</div>
-                        <div>{{ result.status }}</div>
-                        <div>{{ result.summary }}</div>
-                        <div>{{ result.firstDayAired }}</div>
-                        <span>
-                            <i class="fa-regular fa-trash-can fa-lg mouse-hover"
-                            (click)="onDelete(result.tvDetailId)"
-                            ></i>
-                        </span>
-                    </p-card>
+            <div class="card-list-container-with-gradient">
+                <div class="tvCardListContainer">
+                    <div class="singleTvCardContainer" *ngFor="let result of service.addedTvList">
+                        <p-card class="queryResultCard" header={{result.title}}
+                        (click)="populateForm(result)"
+                        >
+                            <div class="listImgContainer">
+                                <img class="listImg" src="{{ result.artworkUrl }}" alt="">
+                            </div>
+                            <div>{{ result.network }}</div>
+                            <div>{{ result.status }}</div>
+                            <div>{{ result.summary }}</div>
+                            <div>{{ result.firstDayAired }}</div>
+                            <span>
+                                <i class="fa-regular fa-trash-can fa-lg mouse-hover"
+                                (click)="onDelete(result.tvDetailId)"
+                                ></i>
+                            </span>
+                        </p-card>
+                    </div>
                 </div>
+                <!-- <div class="gradient-overlay"></div> -->
             </div>
         <!-- </ng-template> -->
     <!-- </p-dataView> -->
