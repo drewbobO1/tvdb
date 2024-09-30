@@ -3,7 +3,7 @@
         <!-- <ng-template pTemplate="list" let-addedTvList> -->
             <div class="card-list-container-with-gradient">
                 <div class="tvCardListContainer">
-                    <div class="singleTvCardContainer" *ngFor="let result of service.addedTvList">
+                    <div class="singleTvCardContainer" *ngFor="let result of service.addedTvList.slice().reverse()">
                         <p-card class="queryResultCard" header={{result.title}}
                         (click)="populateForm(result)"
                         >

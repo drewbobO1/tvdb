@@ -1,5 +1,5 @@
 .body {
-    border: 2px solid hotpink;
+    /* border: 2px solid hotpink; */
 
     /* margin-top: 200px; */
     display: flex;
@@ -74,9 +74,11 @@
 
 .singleTvCardContainer {
     /* border: 2px solid hotpink; */
-    margin: 1rem 0;
+    margin-bottom: 2rem;
 }
 
 .queryResultCard {
-    
+    /* display: flex;
+    flex-direction: row; */
+
 }
