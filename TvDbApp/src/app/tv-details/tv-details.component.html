@@ -21,16 +21,23 @@
                                 <div class="text-content">
                                     <div>{{ result.summary }}</div>
                                     <div class="footer-info">
-                                        <!-- <div>First aired: {{ result.firstDayAired }}</div> -->
-                                        <p-tag value="First aired: {{ result.firstDayAired }}" [rounded]="true" />
-                                        <p-tag value="{{ result.status }}" [rounded]="true" />
+                                        <div class="info-tag-group">
+                                            <div class="footer-item">
+                                                <p-tag value="First aired: {{ result.firstDayAired }}" [rounded]="true" />
+                                            </div>
+                                            <div class="footer-item">
+                                                <p-tag value="{{ result.status }}" [rounded]="true" />
+                                            </div>
+                                        </div>
+                                            <div class="footer-item">
+                                                <span>
+                                                    <i class="fa-regular fa-trash-can fa-lg mouse-hover"
+                                                    (click)="onDelete(result.tvDetailId)"
+                                                    ></i>
+                                                </span>
+                                            </div>
                                     </div>
                                 </div>
-                                <span>
-                                    <i class="fa-regular fa-trash-can fa-lg mouse-hover"
-                                    (click)="onDelete(result.tvDetailId)"
-                                    ></i>
-                                </span>
                             </div>
                         </ng-template>
                         </p-card>

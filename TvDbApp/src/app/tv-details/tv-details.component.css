@@ -86,10 +86,22 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    margin-left: 1rem;
 }
 
 .footer-info {
     display: flex;
     flex-direction: row;
-    justify-content: end;
+    justify-content: space-between;
+}
+
+.footer-item {
+    margin-left: .25rem;
+
+}
+
+.info-tag-group {
+    display: flex;
+    flex-direction: row;
 }
