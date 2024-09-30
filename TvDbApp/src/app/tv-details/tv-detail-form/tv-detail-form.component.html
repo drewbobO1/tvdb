@@ -1,6 +1,6 @@
-<div class="form-body">
+<div class="form-container">
     <p-card header="Show Details">
-        <form #tvForm="ngForm" (submit)="onSubmit(tvForm)">
+        <form class="form-body" #tvForm="ngForm" (submit)="onSubmit(tvForm)">
             <input type="hidden" name="tvDetailId" [value]="service.formDataToPush.tvDetailId">
 
             <div class="single-field">
@@ -39,6 +39,18 @@
             </div>
             <div class="single-field">
                 <p-floatLabel>
+                    <p-calendar 
+                        [iconDisplay]="'input'" 
+                        [showIcon]="true" 
+                        inputId="icondisplay"
+                        #firstDayAired="ngModel" name="firstDayAired"
+                        [(ngModel)]="service.formDataToPush.firstDayAired"
+                    />
+                    <label for="icondisplay">First day aired</label>
+                </p-floatLabel>
+            </div>
+            <div class="single-field">
+                <p-floatLabel>
                     <textarea 
                         id="summary" 
                         rows="5" cols="30" 
@@ -50,19 +62,13 @@
                     <label for="summary">Summary</label>
                 </p-floatLabel>
             </div>
-            <div class="single-field">
-                <p-floatLabel>
-                    <p-calendar 
-                        [iconDisplay]="'input'" 
-                        [showIcon]="true" 
-                        inputId="icondisplay"
-                        #firstDayAired="ngModel" name="firstDayAired"
-                        [(ngModel)]="service.formDataToPush.firstDayAired"
-                    />
-                    <label for="icondisplay">First day aired</label>
-                </p-floatLabel>
-            </div>
-            <p-button label="Submit" (onClick)="onSubmit(tvForm)"/>
+            <p-button 
+            label="Submit" 
+            (onClick)="onSubmit(tvForm)"
+            [text]="true"
+            [raised]="true"
+            severity="contrast"
+            />
              <!-- <button type="submit">Submit!</button> -->
         </form>
     </p-card>

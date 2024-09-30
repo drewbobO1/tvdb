@@ -1,5 +1,15 @@
-.form-body {
+.form-container {
     border: 5px solid red;
+    /* justify-content: flex-end; */
+    /* min-width: 400px; */
+}
+
+.form-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    /* align-items: center; */
+
 }
 
 .single-field {
@@ -21,3 +31,7 @@ textarea ~ label {
   top: -.75em!important;
   font-size: 12px!important;
 }
+
+/* p-button {
+    color: white;
+} */

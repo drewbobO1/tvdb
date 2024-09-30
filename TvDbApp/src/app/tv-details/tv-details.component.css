@@ -3,7 +3,7 @@
 
     margin-top: 500px;
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
 }
 
 .listImg {
