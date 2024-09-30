@@ -24,31 +24,33 @@
     </ng-template>
 </p-dataView> -->
 
-<div *ngFor="let result of tvQueryList">
-    <p-card class="queryResultCard" 
-    header={{result.title}} subheader="{{result.network}}"
-    (click)="handleResultClick(result)"
-    >
-        <ng-template pTemplate="content">
-            <div class="card-content">
-                <div class="listImgContainer">
-                    <img class="listImg" src="{{ result.artworkUrl }}" alt="">
-                </div>
-                <!-- <div>{{ result.network }}</div> -->
-                <div class="text-content">
-                    <div>{{ result.summary }}</div>
-                    <div class="footer-info">
-                        <div class="info-tag-group">
-                            <div class="footer-item">
-                                <p-tag value="First aired: {{ result.firstDayAired }}" [rounded]="true" />
-                            </div>
-                            <div class="footer-item">
-                                <p-tag value="{{ result.status }}" [rounded]="true" />
+<div class="searchCardListContainer">
+    <div class="singleTvCardContainer" *ngFor="let result of tvQueryList">
+        <p-card class="queryResultCard" 
+        header={{result.title}} subheader="{{result.network}}"
+        (click)="handleResultClick(result)"
+        >
+            <ng-template pTemplate="content">
+                <div class="card-content">
+                    <div class="listImgContainer">
+                        <img class="listImg" src="{{ result.artworkUrl }}" alt="">
+                    </div>
+                    <!-- <div>{{ result.network }}</div> -->
+                    <div class="text-content">
+                        <div>{{ result.summary }}</div>
+                        <div class="footer-info">
+                            <div class="info-tag-group">
+                                <div class="footer-item">
+                                    <p-tag value="First aired: {{ result.firstDayAired }}" [rounded]="true" />
+                                </div>
+                                <div class="footer-item">
+                                    <p-tag value="{{ result.status }}" [rounded]="true" />
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </ng-template>
-    </p-card>
+            </ng-template>
+        </p-card>
+    </div>
 </div>

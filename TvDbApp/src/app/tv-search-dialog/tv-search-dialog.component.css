@@ -1,7 +1,6 @@
 :host ::ng-deep .p-card-body {
     color: rgb(157, 157, 161);
     background-color: rgb(69, 65, 67);
-    /* border-radius: 10%; */
 }
 
 .listImg {
@@ -9,7 +8,7 @@
     height: 12rem;
 }
 
-.tvCardListContainer {
+.searchCardListContainer {
     /* border: 2px solid hotpink; */
     position: relative;
 
