@@ -9,11 +9,13 @@ import { DialogModule } from 'primeng/dialog';
 import { ButtonModule } from 'primeng/button';
 import { InputGroupModule } from 'primeng/inputgroup';
 import { InputGroupAddonModule } from 'primeng/inputgroupaddon';
+import { TagModule } from 'primeng/tag';
 
 import { TvSearchDialogComponent } from '../tv-search-dialog/tv-search-dialog.component';
 
 import { TvDetailService } from '../shared/tv-detail.service';
 import { TvDetail } from '../shared/tv-detail.model';
+
 
 @Component({
   selector: 'app-tv-details',
@@ -28,7 +30,8 @@ import { TvDetail } from '../shared/tv-detail.model';
     ButtonModule,
     TvSearchDialogComponent,
     TvDetailFormComponent,
-    CardModule
+    CardModule,
+    TagModule
   ],
   templateUrl: './tv-details.component.html',
   styleUrls: [

@@ -4,21 +4,35 @@
             <div class="card-list-container-with-gradient">
                 <div class="tvCardListContainer">
                     <div class="singleTvCardContainer" *ngFor="let result of service.addedTvList.slice().reverse()">
-                        <p-card class="queryResultCard" header={{result.title}}
+                        <p-card class="queryResultCard" 
+                        header={{result.title}} subheader="{{result.network}}"
                         (click)="populateForm(result)"
                         >
-                            <div class="listImgContainer">
-                                <img class="listImg" src="{{ result.artworkUrl }}" alt="">
+                        <!-- <ng-template pTemplate="header">
+                                <img class="listImg" alt="TV Show poster" src="{{ result.artworkUrl }}" />
+                        </ng-template> -->
+                        
+                        <ng-template pTemplate="content">
+                            <div class="card-content">
+                                <div class="listImgContainer">
+                                    <img class="listImg" src="{{ result.artworkUrl }}" alt="">
+                                </div>
+                                <!-- <div>{{ result.network }}</div> -->
+                                <div class="text-content">
+                                    <div>{{ result.summary }}</div>
+                                    <div class="footer-info">
+                                        <!-- <div>First aired: {{ result.firstDayAired }}</div> -->
+                                        <p-tag value="First aired: {{ result.firstDayAired }}" [rounded]="true" />
+                                        <p-tag value="{{ result.status }}" [rounded]="true" />
+                                    </div>
+                                </div>
+                                <span>
+                                    <i class="fa-regular fa-trash-can fa-lg mouse-hover"
+                                    (click)="onDelete(result.tvDetailId)"
+                                    ></i>
+                                </span>
                             </div>
-                            <div>{{ result.network }}</div>
-                            <div>{{ result.status }}</div>
-                            <div>{{ result.summary }}</div>
-                            <div>{{ result.firstDayAired }}</div>
-                            <span>
-                                <i class="fa-regular fa-trash-can fa-lg mouse-hover"
-                                (click)="onDelete(result.tvDetailId)"
-                                ></i>
-                            </span>
+                        </ng-template>
                         </p-card>
                     </div>
                 </div>
