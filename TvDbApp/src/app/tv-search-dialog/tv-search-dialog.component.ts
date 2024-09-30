@@ -13,6 +13,9 @@ import { InputGroupAddonModule } from 'primeng/inputgroupaddon';
 import { CardModule } from 'primeng/card';
 
 import { TvDetailFormComponent } from '../tv-details/tv-detail-form/tv-detail-form.component';
+import { FloatLabelModule } from 'primeng/floatlabel';
+import { TagModule } from 'primeng/tag';
+
 
 @Component({
   selector: 'app-tv-search-dialog',
@@ -24,7 +27,9 @@ import { TvDetailFormComponent } from '../tv-details/tv-detail-form/tv-detail-fo
     InputGroupModule,
     InputGroupAddonModule,
     CardModule,
-    TvDetailFormComponent
+    TvDetailFormComponent,
+    FloatLabelModule,
+    TagModule
   ],
   templateUrl: './tv-search-dialog.component.html',
   styleUrls: [

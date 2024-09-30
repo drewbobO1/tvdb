@@ -1,7 +1,6 @@
-<p>tv-search-dialog works!</p>
 <div class="single-field">
     <p-inputGroup>
-        <input #tvTitleQuery type="text" pInputText placeholder="Keyword" />
+        <input #tvTitleQuery type="text" pInputText placeholder="E.g., The Sopranos, Cowboy Bebop, etc. ..." />
         <button type="button" 
         pButton icon="pi pi-search" 
         class="p-button-secondary"
@@ -11,7 +10,8 @@
     </p-inputGroup>
 </div>
 
-<p-dataView #dv [value]="tvQueryList">
+
+<!-- <p-dataView #dv [value]="tvQueryList">
     <ng-template pTemplate="list" let-tvQueryList>
         <div *ngFor="let result of tvQueryList">
             <p-card class="queryResultCard" header={{result.title}} (click)="handleResultClick(result)">
@@ -22,4 +22,33 @@
             </p-card>
         </div>
     </ng-template>
-</p-dataView>
+</p-dataView> -->
+
+<div *ngFor="let result of tvQueryList">
+    <p-card class="queryResultCard" 
+    header={{result.title}} subheader="{{result.network}}"
+    (click)="handleResultClick(result)"
+    >
+        <ng-template pTemplate="content">
+            <div class="card-content">
+                <div class="listImgContainer">
+                    <img class="listImg" src="{{ result.artworkUrl }}" alt="">
+                </div>
+                <!-- <div>{{ result.network }}</div> -->
+                <div class="text-content">
+                    <div>{{ result.summary }}</div>
+                    <div class="footer-info">
+                        <div class="info-tag-group">
+                            <div class="footer-item">
+                                <p-tag value="First aired: {{ result.firstDayAired }}" [rounded]="true" />
+                            </div>
+                            <div class="footer-item">
+                                <p-tag value="{{ result.status }}" [rounded]="true" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+    </p-card>
+</div>

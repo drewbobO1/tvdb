@@ -1,23 +1,16 @@
-import { Component, AfterViewInit, ElementRef, viewChild, ViewChild } from '@angular/core';
+import { Component, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-// import { FormsModule } from '@angular/forms';
 
-// import { PrimeNGConfig } from 'primeng/api';
 import { FloatLabelModule } from 'primeng/floatlabel';
 import { TvDetailsComponent } from './tv-details/tv-details.component';
 
 import { Application } from '@splinetool/runtime';
-
-// const canvas = document.getElementById('canvas3d') as HTMLCanvasElement;
-// const app = new Application(canvas);
-// app.load('https://prod.spline.design/NyGC8F78inZsFujq/scene.splinecode');
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
     RouterOutlet,
-    // FormsModule,
     FloatLabelModule,
     TvDetailsComponent
   ],

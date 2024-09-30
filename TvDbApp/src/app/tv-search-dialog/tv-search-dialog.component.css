@@ -3,3 +3,59 @@
     background-color: rgb(69, 65, 67);
     /* border-radius: 10%; */
 }
+
+.listImg {
+    width: 8rem;
+    height: 12rem;
+}
+
+.tvCardListContainer {
+    /* border: 2px solid hotpink; */
+    position: relative;
+
+    max-width: 750px;
+    max-height: 100%;
+    height: 100%;
+    overflow-y: scroll;
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.tvCardListContainer::-webkit-scrollbar {
+    display: none;
+}
+
+.singleTvCardContainer {
+    /* border: 2px solid hotpink; */
+    margin-bottom: 2rem;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: row;
+}
+
+.text-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    margin-left: 1rem;
+}
+
+.footer-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footer-item {
+    margin-left: .25rem;
+
+}
+
+.info-tag-group {
+    display: flex;
+    flex-direction: row;
+}
