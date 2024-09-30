@@ -5,3 +5,10 @@
 @import 'primeflex/primeflex.css';
 @import "primeng/resources/themes/aura-dark-noir/theme.css";
 
+/* .fullWidthBtn {
+    width: 100%;
+} */
+
+/* ::ng-deep .fullWidthBtn {
+    width: 100%;
+} */

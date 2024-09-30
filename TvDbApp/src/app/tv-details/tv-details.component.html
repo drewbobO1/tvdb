@@ -23,9 +23,23 @@
             </div>
         <!-- </ng-template> -->
     <!-- </p-dataView> -->
-    <app-tv-detail-form />
-    <p-button (onClick)="showDialog()" label="Show" />
-    <p-dialog header="Search shows" [modal]="true" [(visible)]="dialogVisible" [style]="{ width: '50rem' }">
+     <div class="formAndSearchBtnContainer">
+         <app-tv-detail-form />
+         <div class="searchBtnContainer">
+             <!-- <p-button 
+             (onClick)="showDialog()" label="Show" 
+             class="full-width-btn"
+             /> -->
+             <button
+             (click)="showDialog()"
+             label="Show" 
+             class="full-width-btn"
+             >
+             Search for a show
+             </button>
+         </div>
+     </div>
+     <p-dialog header="Search shows" [modal]="true" [(visible)]="dialogVisible" [style]="{ width: '50rem' }">
         <app-tv-search-dialog />
     </p-dialog>
 

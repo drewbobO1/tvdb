@@ -1,10 +1,47 @@
 .body {
     border: 2px solid hotpink;
 
-    margin-top: 500px;
+    margin-top: 400px;
     display: flex;
     flex-direction: row;
 }
+
+.formAndSearchBtnContainer {
+
+}
+
+.searchBtnContainer {
+    margin-top: 2rem;
+}
+
+.full-width-btn {
+    font-family: "Open Sans", sans-serif;
+
+    all: unset;
+    width: 100%;
+    padding: 12px 0;
+
+    text-align: center;
+    border-radius: 8px;
+
+    opacity: 1;
+    transition: background-color 0.2s ease-in-out;
+
+    background-color: rgb(24, 24, 27);
+    color: white;
+}
+
+.full-width-btn:hover {
+    /* opacity: 0.5; */
+    background-color: rgba(24, 24, 27, 0.95);
+}
+
+/* :host ::ng-deep {
+    .full-width-btn {
+        display: block;
+        width: 100%;
+      }
+} */
 
 .listImg {
     width: 2rem;
